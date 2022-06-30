@@ -5,6 +5,8 @@ import ThemeWrapper from './components/ThemeWrapper';
 import ThemeContext from './contexts/ThemeContext';
 import './index.css';
 import 'animate.css';
+import Home from './components/Home';
+import Footer from './components/Footer';
 
 const App = () => {
   const [theme, setTheme] = useState('light');
@@ -13,6 +15,8 @@ const App = () => {
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <ThemeWrapper>
         <Navbar />
+        <Home />
+        <Footer />
       </ThemeWrapper>
     </ThemeContext.Provider>
   );
