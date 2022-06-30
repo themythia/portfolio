@@ -7,7 +7,7 @@ const NavbarMobile = () => {
 
   return (
     <>
-      <nav className='w-screen p-4 flex justify-between sm:p-0 sm:h-14 sm:bg-dark800 sm:shadow-md'>
+      <nav className='w-screen h-[72px] p-4 flex justify-between sm:p-0 sm:h-14 sm:bg-dark800 sm:shadow-md col-span-full '>
         <button onClick={() => setShowMenu(!showMenu)} className='z-[500]'>
           {showMenu ? <MdClose size={40} /> : <MdMenu size={40} />}
         </button>

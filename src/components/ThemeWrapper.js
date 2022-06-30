@@ -33,7 +33,7 @@ const ThemeWrapper = ({ children }) => {
 
   return (
     <div className={theme}>
-      <div className='bg-light dark:bg-dark text-dark dark:text-light h-full min-h-screen w-screen font-poppins box-border'>
+      <div className='bg-light dark:bg-dark text-dark dark:text-light h-full min-h-screen w-screen font-poppins box-border grid grid-cols-4 sm:grid-cols-8 md:grid-cols-12 gap-x-4 md:gap-x-6'>
         {children}
       </div>
     </div>
