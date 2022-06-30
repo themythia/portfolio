@@ -19,3 +19,35 @@
   animation-name: rotateInReversed;
   transform-origin: center;
 }
+
+@keyframes delayedFadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.delayedFadeInUp {
+  animation-name: delayedFadeInUp;
+  animation-delay: 100ms;
+}
+
+@keyframes delayedFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.delayedFadeIn {
+  animation-name: delayedFadeIn;
+  animation-delay: 500ms;
+}
