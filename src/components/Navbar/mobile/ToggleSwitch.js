@@ -5,8 +5,13 @@ const ToggleSwitch = (props) => {
   const { theme, setTheme } = useContext(ThemeContext);
 
   const handleToggle = () => {
-    if (theme === 'light') setTheme('dark');
-    else if (theme === 'dark') setTheme('light');
+    if (theme === 'light') {
+      setTheme('dark');
+      localStorage.setItem('theme', 'dark');
+    } else if (theme === 'dark') {
+      setTheme('light');
+      localStorage.setItem('theme', 'light');
+    }
   };
 
   return (

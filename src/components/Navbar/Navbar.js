@@ -16,27 +16,30 @@ const Navbar = () => {
   };
   const Icon = icons[theme];
 
-  const style = {
-    nav: 'max-w-screen w-full h-14 bg-light100 dark:bg-dark800 shadow-md flex justify-center text-dark/70 dark:text-light/60 row-start-1 row-end-2 lg:px-[200px] xl:px-[calc((100vw-1128px)/2)] grid grid-cols-4 sm:grid-cols-8 md:grid-cols-12 gap-x-4 md:gap-x-6',
-    ul: 'h-full w-full flex items-center text-lg ',
-    button:
-      'w-10 h-10 rounded flex justify-center items-center bg-light dark:bg-dark shadow-sm hover:shadow-md hover:text-dark hover:dark:text-light',
+  const handleToggle = () => {
+    if (theme === 'light') {
+      setTheme('dark');
+      localStorage.setItem('theme', 'dark');
+    } else if (theme === 'dark') {
+      setTheme('light');
+      localStorage.setItem('theme', 'light');
+    }
   };
 
   if (width < 600) return <NavbarMobile />;
   else if (width >= 600)
     return (
-      <nav className={style.nav}>
+      <nav className='max-w-screen w-full h-14 bg-light100 dark:bg-dark800 shadow-md flex justify-center text-dark/70 dark:text-light/60 row-start-1 row-end-2 lg:px-[200px] xl:px-[calc((100vw-1128px)/2)] grid grid-cols-4 sm:grid-cols-8 md:grid-cols-12 gap-x-4 md:gap-x-6'>
         <div className='sm:col-start-2 sm:col-end-8 md:col-start-3 md:col-end-11 flex justify-between items-center'>
-          <ul className={style.ul}>
+          <ul className='h-full w-full flex items-center text-lg '>
             <ListItem id='#home' text='Home' />
             <ListItem id='#about' text='About' />
             <ListItem id='#projects' text='Projects' />
             <ListItem id='#contact' text='Contact' />
           </ul>
           <button
-            className={style.button}
-            onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+            className='w-10 h-10 rounded flex justify-center items-center bg-light dark:bg-dark shadow-sm hover:shadow-md hover:text-dark hover:dark:text-light'
+            onClick={handleToggle}
           >
             <SwitchTransitionWrapper
               state={theme}

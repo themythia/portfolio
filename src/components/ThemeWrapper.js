@@ -3,7 +3,7 @@ import ThemeContext from '../contexts/ThemeContext';
 
 const ThemeWrapper = ({ children }) => {
   const { theme, setTheme } = useContext(ThemeContext);
-  const storedtheme = localStorage.getItem('theme');
+  let storedtheme = localStorage.getItem('theme');
 
   // handles theming
   useEffect(() => {
