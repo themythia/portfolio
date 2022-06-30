@@ -2,3 +2,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes rotateInReversed {
+  from {
+    transform: rotate3d(0, 0, 1, -180deg);
+    opacity: 0;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+.rotateInReversed {
+  animation-name: rotateInReversed;
+  transform-origin: center;
+}
