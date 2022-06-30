@@ -3,6 +3,7 @@ import ThemeContext from '../contexts/ThemeContext';
 
 const ThemeWrapper = ({ children }) => {
   const { theme, setTheme } = useContext(ThemeContext);
+  const storedtheme = localStorage.getItem('theme');
 
   // handles theming
   useEffect(() => {
@@ -28,7 +29,8 @@ const ThemeWrapper = ({ children }) => {
 
       return () => window.removeEventListener('change', listener);
     }
-  }, [theme, setTheme]);
+  }, [setTheme, storedtheme]);
+
   return (
     <div className={theme}>
       <div className='bg-light dark:bg-dark text-dark dark:text-light h-full min-h-screen w-screen'>
