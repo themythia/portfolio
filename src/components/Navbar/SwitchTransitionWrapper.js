@@ -1,15 +1,15 @@
 import { SwitchTransition, CSSTransition } from 'react-transition-group';
 
-const SwitchTransitionWrapper = ({ state, children }) => {
+const SwitchTransitionWrapper = ({ state, children, enter, exit, timeout }) => {
   return (
     <SwitchTransition mode='out-in'>
       <CSSTransition
         key={state}
         classNames={{
-          enterActive: 'animate__animated rotateInReversed animate__faster',
-          exitActive: 'animate__animated animate__rotateOut animate__faster',
+          enterActive: enter,
+          exitActive: exit,
         }}
-        timeout={500}
+        timeout={timeout}
       >
         {children}
       </CSSTransition>

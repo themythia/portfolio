@@ -37,7 +37,12 @@ const Navbar = () => {
           className={style.button}
           onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
         >
-          <SwitchTransitionWrapper state={theme}>
+          <SwitchTransitionWrapper
+            state={theme}
+            enter='animate__animated rotateInReversed animate__faster'
+            exit='animate__animated animate__rotateOut animate__faster'
+            timeout={500}
+          >
             <Icon size={24} />
           </SwitchTransitionWrapper>
         </button>
