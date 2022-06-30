@@ -1,4 +1,5 @@
 import About from './About/About';
+import Contact from './Contact';
 import Projects from './Projects/Projects';
 import Welcome from './Welcome/Welcome';
 
@@ -8,6 +9,7 @@ const Home = () => {
       <Welcome />
       <About />
       <Projects />
+      <Contact />
     </main>
   );
 };

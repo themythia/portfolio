@@ -43,7 +43,7 @@ const ItemInfo = ({ project }) => {
     },
   };
   return (
-    <div className='h-auto w-full flex flex-col justify-center mt-4 bg-light100/60 dark:bg-dark800/60 rounded-lg mb-4 p-4 sm:p-8'>
+    <div className='h-auto w-full max-w-lg flex flex-col justify-center mt-4 bg-light100/60 dark:bg-dark800/60 rounded-lg mb-4 p-4 sm:p-8'>
       <div className='flex justify-between items-center mb-4'>
         <h3 className='font-josefinSans font-semibold text-xl sm:text-2xl text-left underline underline-offset-2 decoration-accent decoration-4'>
           {text[project].title}

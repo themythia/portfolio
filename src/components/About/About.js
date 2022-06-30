@@ -4,11 +4,8 @@ import Title from './Title';
 
 const About = () => {
   return (
-    <section
-      id='about'
-      className='w-full h-full flex flex-col justify-center col-span-full sm:col-start-2 sm:col-end-8 md:col-start-3 md:col-end-11 mb-8'
-    >
-      <Title text='About Me' />
+    <section className='w-full h-full flex flex-col justify-center col-span-full sm:col-start-2 sm:col-end-8 md:col-start-3 md:col-end-11 py-28'>
+      <Title id='about' text='About Me' />
       <Paragraph>
         {`Hello! My name is Emir and I’m a 28 year old student at Anadolu
         University currently studying web design and programming.`}
