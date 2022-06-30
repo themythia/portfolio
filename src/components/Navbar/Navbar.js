@@ -17,7 +17,7 @@ const Navbar = () => {
   const Icon = icons[theme];
 
   const style = {
-    nav: 'w-screen h-full bg-light100 dark:bg-dark800 shadow-md flex justify-center text-dark/70 dark:text-light/60 row-start-1 row-end-2',
+    nav: 'max-w-screen w-full h-14 bg-light100 dark:bg-dark800 shadow-md flex justify-center text-dark/70 dark:text-light/60 row-start-1 row-end-2',
     ul: 'h-full w-full flex justify-center items-center text-lg',
     button:
       'absolute right-4 md:right-6 top-2 w-10 h-10 rounded flex justify-center items-center bg-light dark:bg-dark shadow-sm hover:shadow-md hover:text-dark hover:dark:text-light',
