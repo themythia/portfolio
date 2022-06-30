@@ -51,3 +51,7 @@
   animation-name: delayedFadeIn;
   animation-delay: 500ms;
 }
+
+.bullet {
+  list-style-image: url('/public/assets/bullet.svg');
+}
