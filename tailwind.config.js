@@ -21,6 +21,10 @@ module.exports = {
         light100: '#E0D2CD',
         accent: '#06BBC1',
       },
+      gridTemplateRows: {
+        rows: '56px 1fr minmax(0, min-content)',
+        rowsMobile: '72px 1fr minmax(0, min-content)',
+      },
     },
   },
   plugins: [],
