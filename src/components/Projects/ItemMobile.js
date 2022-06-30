@@ -1,19 +1,19 @@
 import { useState } from 'react';
-import Overlay from './Overlay';
+import ItemInfo from './ItemInfo';
 import ProjectLogos from './ProjectLogos';
 import SwitchTransitionWrapper from '../Navbar/SwitchTransitionWrapper';
 
 const ItemMobile = ({ project }) => {
   const [showOverlay, setShowOverlay] = useState(false);
   const component = {
-    true: Overlay,
+    true: ItemInfo,
     false: ProjectLogos,
   };
   const Item = component[showOverlay];
   return (
     <>
       <div
-        className='flex flex-col items-center justify-center h-[250px] w-full bg-light100 dark:bg-dark800 rounded-lg mb-4 shadow-md'
+        className='flex flex-col items-center justify-center min-h-[250px] max-h-[350px] w-full bg-light100 dark:bg-dark800 rounded-lg mb-4 shadow-md'
         onClick={() => setShowOverlay(true)}
       >
         <SwitchTransitionWrapper

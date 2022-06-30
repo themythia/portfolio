@@ -20,7 +20,14 @@ const ProjectLogos = ({ project, mobile }) => {
 
   const DynamicLogo = logos[theme][project];
   return (
-    <DynamicLogo className={!mobile && 'mt-8 bg-light100 dark:bg-dark800'} />
+    <div
+      className={
+        !mobile &&
+        'w-full dark:bg-dark min-h-[160px] bg-light border-2 border-light100 dark:border-dark800 flex justify-center items-center py-8 rounded-t-lg'
+      }
+    >
+      <DynamicLogo className={mobile && 'max-w-full px-4'} />
+    </div>
   );
 };
 export default ProjectLogos;
