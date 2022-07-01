@@ -7,6 +7,7 @@ import './index.css';
 import 'animate.css';
 import Home from './components/Home';
 import Footer from './components/Footer';
+import ReactGA from 'react-ga4';
 
 const App = () => {
   const [theme, setTheme] = useState('light');
@@ -25,10 +26,10 @@ const App = () => {
     console.log('https://github.com/themythia');
   }, []);
 
-  // useEffect(() => {
-  //   ReactGA.initialize('G-5K71HY9Q07');
-  //   ReactGA.send({ hitType: 'pageview', page: location.pathname });
-  // }, [location.pathname]);
+  useEffect(() => {
+    ReactGA.initialize('G-T5GQ039HG7');
+    ReactGA.send({ hitType: 'pageview', page: window.location.pathname });
+  }, []);
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
