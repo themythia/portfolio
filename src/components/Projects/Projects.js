@@ -1,4 +1,4 @@
-import Title from '../About/Title';
+import Title from '../shared/Title';
 import ProjectContainer from './ProjectContainer';
 
 const Projects = () => {

@@ -1,6 +1,6 @@
 import { FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
-import Paragraph from './About/Paragraph';
-import Title from './About/Title';
+import Paragraph from './shared/Paragraph';
+import Title from './shared/Title';
 
 const Link = ({ link, icon }) => {
   const icons = {

@@ -1,6 +1,6 @@
+import Title from '../shared/Title';
 import List from './List';
-import Paragraph from './Paragraph';
-import Title from './Title';
+import Paragraph from '../shared/Paragraph';
 
 const About = () => {
   return (
