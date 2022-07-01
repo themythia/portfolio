@@ -1,10 +1,11 @@
 import Title from '../shared/Title';
 import List from './List';
 import Paragraph from '../shared/Paragraph';
+import Section from '../shared/Section';
 
 const About = () => {
   return (
-    <section className='w-full h-full flex flex-col justify-center col-span-full sm:col-start-2 sm:col-end-8 md:col-start-3 md:col-end-11 py-28'>
+    <Section>
       <Title id='about' text='About Me' />
       <Paragraph>
         {`Hello! My name is Emir and I’m a 28 year old student at Anadolu
@@ -21,7 +22,7 @@ const About = () => {
       </Paragraph>
       <Paragraph>{`A few technologies I’ve been working with recently:`}</Paragraph>
       <List />
-    </section>
+    </Section>
   );
 };
 export default About;

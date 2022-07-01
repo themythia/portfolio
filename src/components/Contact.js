@@ -1,5 +1,6 @@
 import { FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
 import Paragraph from './shared/Paragraph';
+import Section from './shared/Section';
 import Title from './shared/Title';
 
 const Link = ({ link, icon }) => {
@@ -34,7 +35,7 @@ const Link = ({ link, icon }) => {
 
 const Contact = () => {
   return (
-    <section className='w-full h-full flex flex-col justify-center col-span-full sm:col-start-2 sm:col-end-8 md:col-start-3 md:col-end-11 pt-28 pb-64'>
+    <Section extraStyle='pb-64'>
       <Title id='contact' text={`Let's get in touch`} />
       <Paragraph>{`Feel free to reach out if you’re looking for a developer, have a question or just want to connect.`}</Paragraph>
       <div className='flex flex-col justify-center items-center'>
@@ -44,7 +45,7 @@ const Contact = () => {
         </div>
         <Link icon='mail' link='mailto:al.emir@outlook.com' />
       </div>
-    </section>
+    </Section>
   );
 };
 export default Contact;
