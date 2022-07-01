@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import { MdDarkMode, MdLightMode } from 'react-icons/md';
 import ThemeContext from '../../contexts/ThemeContext';
 import useWindowSize from '../../hooks/useWindowSize';
+import handleToggle from '../../utils/handleToggle';
 import ListItem from './ListItem';
 import NavbarMobile from './mobile/NavbarMobile';
 import SwitchTransitionWrapper from './SwitchTransitionWrapper';
@@ -16,16 +17,6 @@ const Navbar = () => {
   };
   const Icon = icons[theme];
 
-  const handleToggle = () => {
-    if (theme === 'light') {
-      setTheme('dark');
-      localStorage.setItem('theme', 'dark');
-    } else if (theme === 'dark') {
-      setTheme('light');
-      localStorage.setItem('theme', 'light');
-    }
-  };
-
   if (width < 600) return <NavbarMobile />;
   else if (width >= 600)
     return (
@@ -39,7 +30,7 @@ const Navbar = () => {
           </ul>
           <button
             className='w-10 h-10 rounded flex justify-center items-center bg-light dark:bg-dark shadow-sm hover:shadow-md hover:text-dark hover:dark:text-light'
-            onClick={handleToggle}
+            onClick={() => handleToggle(theme, setTheme)}
           >
             <SwitchTransitionWrapper
               state={theme}
