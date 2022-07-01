@@ -25,6 +25,11 @@ const App = () => {
     console.log('https://github.com/themythia');
   }, []);
 
+  // useEffect(() => {
+  //   ReactGA.initialize('G-5K71HY9Q07');
+  //   ReactGA.send({ hitType: 'pageview', page: location.pathname });
+  // }, [location.pathname]);
+
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <ThemeWrapper>
