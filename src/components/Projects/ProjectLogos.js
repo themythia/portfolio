@@ -7,7 +7,7 @@ import { useContext } from 'react';
 import ThemeContext from '../../contexts/ThemeContext';
 
 const ProjectLogos = ({ project, mobile }) => {
-  const { theme, setTheme } = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext);
 
   const logos = {
     dark: {
