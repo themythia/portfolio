@@ -1,25 +1,26 @@
 import useWindowSize from '../../hooks/useWindowSize';
+import ListItem from './ListItem';
 
-const ListItem = ({ text }) => {
-  const { width } = useWindowSize();
-  return (
-    <li className={`md:basis-1/3 ${width <= 350 ? 'basis-full' : 'basis-1/2'}`}>
-      {text}
-    </li>
-  );
-};
 const List = () => {
+  const { width } = useWindowSize();
+  const basis = width <= 350 ? 'basis-full' : 'basis-1/2';
+  const technologies = [
+    'JavaScript (ES6)',
+    'HTML & CSS',
+    'React',
+    'Redux',
+    'TailwindCSS',
+    'styled-components',
+    'SASS',
+    'Git',
+    'Figma',
+  ];
+
   return (
     <ul className='bullet flex flex-row flex-wrap w-full ml-4'>
-      <ListItem text={`JavaScript (ES6)`} />
-      <ListItem text={`HTML & CSS`} />
-      <ListItem text={`React`} />
-      <ListItem text={`Redux`} />
-      <ListItem text={`TailwindCSS`} />
-      <ListItem text={`styled-components`} />
-      <ListItem text={`SASS`} />
-      <ListItem text={`Git`} />
-      <ListItem text={`Figma`} />
+      {technologies.map((tech, index) => (
+        <ListItem key={index} basis={basis} text={tech} />
+      ))}
     </ul>
   );
 };
