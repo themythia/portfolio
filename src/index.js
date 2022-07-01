@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import Nav from './components/Navbar/Nav';
 import ThemeWrapper from './components/ThemeWrapper';
@@ -10,6 +10,20 @@ import Footer from './components/Footer';
 
 const App = () => {
   const [theme, setTheme] = useState('light');
+
+  useEffect(() => {
+    console.log(
+      `
+██╗  ██╗███████╗██╗     ██╗      ██████╗ ██╗
+██║  ██║██╔════╝██║     ██║     ██╔═══██╗██║
+███████║█████╗  ██║     ██║     ██║   ██║██║
+██╔══██║██╔══╝  ██║     ██║     ██║   ██║╚═╝
+██║  ██║███████╗███████╗███████╗╚██████╔╝██╗
+╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝ ╚═════╝ ╚═╝`
+    );
+    console.log('To view more of my work:');
+    console.log('https://github.com/themythia');
+  }, []);
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
