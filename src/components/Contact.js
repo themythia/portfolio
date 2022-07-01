@@ -9,7 +9,7 @@ const Contact = () => {
     <Section extraStyle='pb-64'>
       <Title id='contact' text={`Let's get in touch`} />
       <Paragraph>{`Feel free to reach out if you’re looking for a developer, have a question or just want to connect.`}</Paragraph>
-      <div className='flex flex-col justify-center items-center'>
+      <div className='flex flex-col justify-center items-center mt-8'>
         <div className='flex mb-4'>
           <Link link='https://github.com/themythia' type='contact'>
             <Icon icon='github' twClasses='mr-2 text-2xl sm:text-[32px]' />

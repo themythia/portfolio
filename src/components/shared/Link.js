@@ -1,7 +1,7 @@
 const Link = ({ link, type, children }) => {
   const classes = {
     social:
-      'sm:mx-2 md:mx-3 hover:text-dark hover:dark:text-light duration-200',
+      'sm:mx-4 md:mx-6 hover:text-dark hover:dark:text-light duration-200',
     project:
       'w-10 h-10 flex justify-center items-center mr-4 last:mr-0 text-dark/60 dark:text-light/60 hover:text-dark hover:dark:text-light duration-200',
     contact:
