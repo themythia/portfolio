@@ -1,31 +1,8 @@
 import Icon from './shared/Icon';
+import Link from './shared/Link';
 import Paragraph from './shared/Paragraph';
 import Section from './shared/Section';
 import Title from './shared/Title';
-
-const Link = ({ link, icon }) => {
-  const text =
-    icon === 'github'
-      ? 'GitHub'
-      : icon === 'linkedin'
-      ? 'LinkedIn'
-      : icon === 'mail'
-      ? 'al.emir@outlook.com'
-      : null;
-  return (
-    <a
-      href={link}
-      className='flex items-baseline first:mr-4 text-dark/80 dark:text-light/80 hover:text-dark hover:dark:text-light duration-200 group'
-      target='_blank'
-      rel='noreferrer'
-    >
-      <Icon icon={icon} twClasses='mr-2 text-2xl sm:text-[32px]' />
-      <span className='sm:text-lg group-hover:underline relative bottom-[4px]'>
-        {text}
-      </span>
-    </a>
-  );
-};
 
 const Contact = () => {
   return (
@@ -34,10 +11,25 @@ const Contact = () => {
       <Paragraph>{`Feel free to reach out if you’re looking for a developer, have a question or just want to connect.`}</Paragraph>
       <div className='flex flex-col justify-center items-center'>
         <div className='flex mb-4'>
-          <Link icon='github' link='https://github.com/themythia' />
-          <Link icon='linkedin' link='https://linkedin.com/in/emiral' />
+          <Link link='https://github.com/themythia' type='contact'>
+            <Icon icon='github' twClasses='mr-2 text-2xl sm:text-[32px]' />
+            <span className='sm:text-lg group-hover:underline relative bottom-[4px]'>
+              GitHub
+            </span>
+          </Link>
+          <Link link='https://linkedin.com/in/emiral' type='contact'>
+            <Icon icon='linkedin' twClasses='mr-2 text-2xl sm:text-[32px]' />
+            <span className='sm:text-lg group-hover:underline relative bottom-[4px]'>
+              LinkedIn
+            </span>
+          </Link>
         </div>
-        <Link icon='mail' link='mailto:al.emir@outlook.com' />
+        <Link link='mailto:al.emir@outlook.com' type='contact'>
+          <Icon icon='mail' twClasses='mr-2 text-2xl sm:text-[32px]' />
+          <span className='sm:text-lg group-hover:underline relative bottom-[4px]'>
+            al.emir@outlook.com
+          </span>
+        </Link>
       </div>
     </Section>
   );

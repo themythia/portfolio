@@ -1,18 +1,6 @@
 import projectInfo from '../../utils/projectInfo';
 import Icon from '../shared/Icon';
-
-const Link = ({ link, icon }) => {
-  return (
-    <a
-      href={link}
-      className='w-10 h-10 flex justify-center items-center mr-4 last:mr-0 text-dark/60 dark:text-light/60 hover:text-dark hover:dark:text-light duration-200'
-      target='_blank'
-      rel='noreferrer'
-    >
-      <Icon icon={icon} size={28} />
-    </a>
-  );
-};
+import Link from '../shared/Link';
 
 const ItemInfo = ({ project }) => {
   return (
@@ -22,8 +10,12 @@ const ItemInfo = ({ project }) => {
           {projectInfo[project].title}
         </h3>
         <div className='flex items-center last:mr-0'>
-          <Link link={projectInfo[project].github} icon='github' />
-          <Link link={projectInfo[project].demo} icon='link' />
+          <Link type='project' link={projectInfo[project].github} icon='github'>
+            <Icon icon='github' size={28} />
+          </Link>
+          <Link type='project' link={projectInfo[project].demo}>
+            <Icon icon='link' size={28} />
+          </Link>
         </div>
       </div>
       <p className='md:text-lg'>{projectInfo[project].desc}</p>
