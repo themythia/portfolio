@@ -34,7 +34,7 @@ const Link = ({ link, icon }) => {
 
 const Contact = () => {
   return (
-    <section className='w-full h-full flex flex-col justify-center col-span-full sm:col-start-2 sm:col-end-8 md:col-start-3 md:col-end-11  py-28'>
+    <section className='w-full h-full flex flex-col justify-center col-span-full sm:col-start-2 sm:col-end-8 md:col-start-3 md:col-end-11 pt-28 pb-64'>
       <Title id='contact' text={`Let's get in touch`} />
       <Paragraph>{`Feel free to reach out if you’re looking for a developer, have a question or just want to connect.`}</Paragraph>
       <div className='flex flex-col justify-center items-center'>
