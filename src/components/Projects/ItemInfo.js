@@ -1,11 +1,6 @@
-import { FiGithub, FiExternalLink } from 'react-icons/fi';
+import Icon from '../shared/Icon';
 
 const Link = ({ link, icon }) => {
-  const icons = {
-    github: FiGithub,
-    external: FiExternalLink,
-  };
-  const Icon = icons[icon];
   return (
     <a
       href={link}
@@ -13,7 +8,7 @@ const Link = ({ link, icon }) => {
       target='_blank'
       rel='noreferrer'
     >
-      <Icon size={28} />
+      <Icon icon={icon} size={28} />
     </a>
   );
 };
@@ -50,7 +45,7 @@ const ItemInfo = ({ project }) => {
         </h3>
         <div className='flex items-center last:mr-0'>
           <Link link={text[project].github} icon='github' />
-          <Link link={text[project].demo} icon='external' />
+          <Link link={text[project].demo} icon='link' />
         </div>
       </div>
       <p className='md:text-lg'>{text[project].desc}</p>

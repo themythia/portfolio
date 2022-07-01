@@ -1,14 +1,9 @@
-import { FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
+import Icon from './shared/Icon';
 import Paragraph from './shared/Paragraph';
 import Section from './shared/Section';
 import Title from './shared/Title';
 
 const Link = ({ link, icon }) => {
-  const icons = {
-    github: FiGithub,
-    linkedin: FiLinkedin,
-    mail: FiMail,
-  };
   const text =
     icon === 'github'
       ? 'GitHub'
@@ -17,7 +12,6 @@ const Link = ({ link, icon }) => {
       : icon === 'mail'
       ? 'al.emir@outlook.com'
       : null;
-  const Icon = icons[icon];
   return (
     <a
       href={link}
@@ -25,7 +19,7 @@ const Link = ({ link, icon }) => {
       target='_blank'
       rel='noreferrer'
     >
-      <Icon className='mr-2 text-2xl sm:text-[32px]' />
+      <Icon icon={icon} twClasses='mr-2 text-2xl sm:text-[32px]' />
       <span className='sm:text-lg group-hover:underline relative bottom-[4px]'>
         {text}
       </span>
