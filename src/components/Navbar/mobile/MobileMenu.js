@@ -1,5 +1,5 @@
 import { useLayoutEffect } from 'react';
-import ListItem from '../ListItem';
+import ListItem from '../NavListItem';
 import ToggleSwitch from './ToggleSwitch';
 import TransitionWrapper from './TransitionWrapper';
 
@@ -20,7 +20,7 @@ const MobileMenu = ({ showMenu, setShowMenu }) => {
 
   return (
     <TransitionWrapper state={showMenu}>
-      <div className='bg-light100 dark:bg-dark800 w-full max-w-full h-screen pt-[72px] top-0 fixed z-50 p-4 text-lg '>
+      <div className='bg-light100 dark:bg-dark800 w-full max-w-full h-screen pt-[72px] top-0 left-0 fixed z-50 p-4 text-lg '>
         <ul className='flex flex-col border-b dark:border-light/40 border-dark/40 pb-4'>
           <ListItem
             id='#home'

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
-import Navbar from './components/Navbar/Navbar';
+import Nav from './components/Navbar/Nav';
 import ThemeWrapper from './components/ThemeWrapper';
 import ThemeContext from './contexts/ThemeContext';
 import './index.css';
@@ -14,7 +14,7 @@ const App = () => {
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <ThemeWrapper>
-        <Navbar />
+        <Nav />
         <Home />
         <Footer />
       </ThemeWrapper>

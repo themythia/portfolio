@@ -1,18 +1,9 @@
 import { useContext } from 'react';
 import ThemeContext from '../../../contexts/ThemeContext';
+import handleToggle from '../../../utils/handleToggle';
 
-const ToggleSwitch = (props) => {
+const ToggleSwitch = () => {
   const { theme, setTheme } = useContext(ThemeContext);
-
-  const handleToggle = () => {
-    if (theme === 'light') {
-      setTheme('dark');
-      localStorage.setItem('theme', 'dark');
-    } else if (theme === 'dark') {
-      setTheme('light');
-      localStorage.setItem('theme', 'light');
-    }
-  };
 
   return (
     <input

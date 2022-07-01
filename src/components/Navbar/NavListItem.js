@@ -1,5 +1,7 @@
-const ListItem = ({ id, text, mobile, setShowMenu }) => {
+const NavListitem = ({ id, text, mobile, setShowMenu }) => {
   const closeMenu = () => {
+    // on bigger screens setShowMenu not passed,
+    // this check is to not get an error due to it
     if (setShowMenu) setShowMenu(false);
   };
   return (
@@ -16,4 +18,4 @@ const ListItem = ({ id, text, mobile, setShowMenu }) => {
     </li>
   );
 };
-export default ListItem;
+export default NavListitem;
