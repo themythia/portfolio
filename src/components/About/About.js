@@ -8,12 +8,12 @@ const About = () => {
     <Section>
       <Title id='about' text='About Me' />
       <Paragraph>
-        {`Hello! My name is Emir and I’m a 28 year old student at Anadolu
+        {`Hello! My name is Emir and I’m a 29 year old student at Anadolu
         University currently studying web design and programming.`}
       </Paragraph>
       <Paragraph>
         {`I’ve always been fascinated with development of websites and
-        applications, so I decided to learn how to make them in 2018.`}
+        applications, so I decided to learn how to make them 2 years ago.`}
       </Paragraph>
       <Paragraph>
         {`Through my studies, I’ve gained a solid understanding of web development
