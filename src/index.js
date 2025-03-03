@@ -8,6 +8,7 @@ import 'animate.css';
 import Home from './components/Home';
 import Footer from './components/Footer';
 import ReactGA from 'react-ga4';
+import { Analytics } from '@vercel/analytics/react';
 
 const App = () => {
   const [theme, setTheme] = useState('light');
@@ -38,6 +39,7 @@ const App = () => {
         <Home />
         <Footer />
       </ThemeWrapper>
+      <Analytics />
     </ThemeContext.Provider>
   );
 };
