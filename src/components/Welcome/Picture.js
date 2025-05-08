@@ -4,7 +4,7 @@ const Picture = () => {
       <img
         className='w-1/2 max-w-[250px] shadow-md rounded-full border-2 border-light/60 dark:border-dark/60'
         src='/assets/pic.png'
-        alt='Emir Al'
+        alt=''
       />
     </div>
   );

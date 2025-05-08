@@ -11,7 +11,7 @@ import ReactGA from 'react-ga4';
 import { Analytics } from '@vercel/analytics/react';
 
 const App = () => {
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState('dark');
 
   useEffect(() => {
     console.log(
@@ -35,9 +35,9 @@ const App = () => {
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <ThemeWrapper>
-        <Nav />
+        {/* <Nav /> */}
         <Home />
-        <Footer />
+        {/* <Footer /> */}
       </ThemeWrapper>
       <Analytics />
     </ThemeContext.Provider>

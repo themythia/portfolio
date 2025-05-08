@@ -1,4 +1,4 @@
-const Link = ({ link, type, children }) => {
+const Link = ({ link, type, children, label }) => {
   const classes = {
     social:
       'sm:mx-4 md:mx-6 hover:text-dark hover:dark:text-light duration-200',
@@ -8,7 +8,13 @@ const Link = ({ link, type, children }) => {
       'flex items-baseline first:mr-4 text-dark/80 dark:text-light/80 hover:text-dark hover:dark:text-light duration-200 group',
   };
   return (
-    <a href={link} className={classes[type]} target='_blank' rel='noreferrer'>
+    <a
+      href={link}
+      className={classes[type]}
+      target='_blank'
+      rel='noreferrer'
+      aria-label={label}
+    >
       {children}
     </a>
   );
